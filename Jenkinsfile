@@ -7,6 +7,13 @@ pipeline {
                 echo 'Building..'
             }
         }
+        
+        stage('SonarQube') {
+            steps {
+                echo 'code scanning..'
+            }
+        }
+        
         stage('Test') {
             steps {
                 echo 'Testing..'
